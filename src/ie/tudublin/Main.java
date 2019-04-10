@@ -1,6 +1,8 @@
 package ie.tudublin;
 
-public class Main
+import processing.core.PApplet;
+
+public class Main extends PApplet
 {	
 
 	public void helloProcessing()
