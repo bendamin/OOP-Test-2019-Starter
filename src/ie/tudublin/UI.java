@@ -43,10 +43,19 @@ public class UI extends PApplet
 	public void draw()
 	{	
 		background(255);
-		float y = height/resistors.size();
+
+		stroke(0);
+		float y;
+		y = height/(resistors.size()*2);
 		
 		for(int i = 0; i < resistors.size(); i++){
-			resistors.get(i).render(y);
+			int temp = resistors.get(i).resistor();
+
+			line(width/5,y,width/4,y);
+			rect(width/4,y - 40, width/2, 80);
+			line(width - (width/5),y,width - (width/4),y);
+
+
 		}
 	}
 
@@ -98,7 +107,7 @@ public class UI extends PApplet
 		}
 
 		for(int j = 0; j < resistors.size(); j++){
-		resistors.get(j).Resistor();
+		resistors.get(j).resistor();
 		}
 		
 	}

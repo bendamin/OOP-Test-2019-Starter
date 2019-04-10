@@ -13,17 +13,20 @@ public class Resistor extends PApplet
     public int tens;
     public int hundreds;
 
-    public void Resistor(){
+    public int resistor(){
         int hundreds = (value / 100);
         int tens = (value - (hundreds * 100)) / 10;
         int ones = value - ((hundreds * 100)  + (tens * 10));
         print(hundreds + ",");
         print(tens + ",");
         println(ones);
+
+
+        return value;
     }
 
-    public void render(float y){
-        
+    public void render(){
+
     }
 
     
