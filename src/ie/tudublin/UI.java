@@ -55,6 +55,8 @@ public class UI extends PApplet
 			rect(width/4,y - 40, width/2, 80);
 			line(width - (width/5),y,width - (width/4),y);
 
+			y += height/(resistors.size()*2);
+
 
 		}
 	}

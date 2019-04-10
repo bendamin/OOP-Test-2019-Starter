@@ -25,8 +25,11 @@ public class Resistor extends PApplet
         return value;
     }
 
-    public void render(){
-
+    public void render(float y)
+    {
+        line(width/5,y,width/4,y);
+		rect(width/4,y - 40, width/2, 80);
+		line(width - (width/5),y,width - (width/4),y);
     }
 
     
