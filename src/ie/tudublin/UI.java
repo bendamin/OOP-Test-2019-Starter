@@ -45,17 +45,34 @@ public class UI extends PApplet
 		background(255);
 
 		stroke(0);
+		fill(0);
 		float y;
 		y = height/(resistors.size()*2);
 		
 		for(int i = 0; i < resistors.size(); i++){
-			int temp = resistors.get(i).resistor();
+			resistors.get(i).resistor();
 
 			line(width/5,y,width/4,y);
+			fill(255);
 			rect(width/4,y - 40, width/2, 80);
 			line(width - (width/5),y,width - (width/4),y);
 
+			noStroke();
+
+			
+			fill(map(resistors.get(i).getHundreds(),0,10,0,255),0,0);
+			rect((width/4)+ 30,y - 40, 20, 80);
+			fill(0,map(resistors.get(i).getTens(),0,10,0,255),0);
+			rect((width/4)+ 80,y - 40, 20, 80);
+			fill(0,0,map(resistors.get(i).getOnes(),0,10,0,255));
+			rect((width/4)+ 130,y - 40, 20, 80);
+
+
+			fill(0);
+			text(Integer.toString(resistors.get(i).resistor()),width - (width/6),y);
+
 			y += height/(resistors.size()*2);
+			stroke(0);
 
 
 		}
