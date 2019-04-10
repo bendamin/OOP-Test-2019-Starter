@@ -50,6 +50,7 @@ public class UI extends PApplet
 		y = height/(resistors.size()*2);
 		
 		for(int i = 0; i < resistors.size(); i++){
+			int temp;
 			resistors.get(i).resistor();
 
 			line(width/5,y,width/4,y);
@@ -59,8 +60,13 @@ public class UI extends PApplet
 
 			noStroke();
 
+			temp = resistors.get(i).getHundreds();
+			//for(int j = 0; j < colours.size(); j++){
+				//if(temp = colours.get(j))
+			//}
 			
-			fill(map(resistors.get(i).getHundreds(),0,10,0,255),0,0);
+			//fill(temp);#
+			fill(0,map(resistors.get(i).getHundreds(),0,10,0,255),0);
 			rect((width/4)+ 30,y - 40, 20, 80);
 			fill(0,map(resistors.get(i).getTens(),0,10,0,255),0);
 			rect((width/4)+ 80,y - 40, 20, 80);
