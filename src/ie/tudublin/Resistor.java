@@ -22,5 +22,9 @@ public class Resistor extends PApplet
         println(ones);
     }
 
+    public void render(float y){
+        
+    }
+
     
 }

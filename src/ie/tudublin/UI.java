@@ -41,7 +41,13 @@ public class UI extends PApplet
 	}
 	
 	public void draw()
-	{			
+	{	
+		background(255);
+		float y = height/resistors.size();
+		
+		for(int i = 0; i < resistors.size(); i++){
+			resistors.get(i).render(y);
+		}
 	}
 
 	public void loadColours(){
